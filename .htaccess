@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /lovesnips/
+RewriteRule ^$ viewsnips.php
+
+RewriteRule ^([^/.]+)/?$ viewsnip.php?snip=$1 [L]
+RewriteRule ^cat/([^/.]+)/?$ viewsnips.php?cat=$1 [L]
+RewriteRule ^cat/(.+).php$ $1.php [L]
+RewriteRule ^cat/(.+).css$ $1.css [L]
